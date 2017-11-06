@@ -49,11 +49,12 @@ $(document).ready(function(){
 		$(xml).find("AvLans").each(function(){
 			var id=this.tagName;//ru|en
 			$(this).children().each(function(){
-				var tagName=this.tagName;//id,spark_desc
+				var lanclass=this.tagName;//id,spark_desc
 				$(this).children().each(function(){
+					var idclass=this.tagName;//id,spark_desc
 					var val=$(this).text();//ru,Описание на спарк
-					console.log(id+":"+tagName+":"+val);
-					$(".text_"+id+"."+tagName).val(val);
+					console.log(lanclass+":"+idclass+":"+val);
+					$(".text_"+lanclass+"."+idclass).val(val);
 				});
 			});
 		});
@@ -75,6 +76,6 @@ $(document).ready(function(){
 	
 	});
 	
-	console.log('rdy ver 1.17');
+	console.log('rdy ver 1.18');
 });
 </script>
