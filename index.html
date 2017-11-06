@@ -8,6 +8,9 @@
 <style>
 .wrapper{width:100%;}
 .hidden{display:none;}
+.linkBox{max-width:900px;margin:0 auto;padding:20px 20px;}
+.linkBox .desc{font-size:16px;line-height:18px;margin-bottom:15px;padding-bottom:15px;border-bottom:solid 1px #808080;}
+.linkBox .link{font-size:14px;line-height:16px;margin-bottom:15px;padding-bottom:15px;color:#808080;}
 
 #topBlock {height:40px;}
 #langSelector {border:solid 1px #000;height:40px;position:absolute;right:0px;margin:5px 5px;}
@@ -25,27 +28,38 @@
 	</ul>
 </div>
 
-<div id="" class="wrapper">
-	<div>
-		<span class="spark_desc text_ru textWrapper"></span>
+<div id="" class="wrapper linkBox">
+	
+	<div class="desc">
+		
+		<span class="spark_desc text_ru textWrapper "></span>
 		<span class="spark_desc text_en textWrapper hidden"></span>
-	</div>	
-	<div>
+		
+	</div>
+	
+	<div class="link">
+	
 		<span>https://spark.ru/startup/yahont/blog/33161/chto-takoe-yahont-i-chto-mi-hotim</span>
+		
 	</div>
 
 </div>
 
-<div id="" class="wrapper">
-	<div>
-		<span class="github_desc text_ru textWrapper"></span>
-		<span class="github_desc text_en textWrapper hidden"></span>
-	</div>	
-	<div>
+<div id="" class="wrapper linkBox">
+	
+	<div class="desc">
+	
+		<span class="title github_desc text_ru textWrapper"></span>
+		<span class="link github_desc text_en textWrapper hidden"></span>
+		
+	</div>
+	
+	<div class="link">
+	
 		<span>https://github.com/akhasoft/Yakhont</span>
+		
 	</div>	
-	
-	
+
 </div>
 <script>
 $(document).ready(function(){
@@ -83,7 +97,7 @@ $(document).ready(function(){
 	
 	});
 	
-	console.log('rdy ver 1.22');
+	console.log('rdy ver 1.23');
 });
 </script>
 </body>
