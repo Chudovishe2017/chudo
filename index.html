@@ -51,13 +51,13 @@ $(document).ready(function(){
 			var tagName=this.tagName;
 			console.log(tagName+"<<1");
 			$(this).children().each(function(){
-				var tagName1=this.tagName;
-			console.log(tagName1+"<<2");
-				var tagName2=$(this).tagName;
-			console.log(tagName2+"<<3");
-				var val=$(this).text();
-			console.log(val+"<<4");
-			}
+					var tagName1=this.tagName;
+				console.log(tagName1+"<<2");
+					var tagName2=$(this).tagName;
+				console.log(tagName2+"<<3");
+					var val=$(this).text();
+				console.log(val+"<<4");
+			});
 		});
 
 	}
