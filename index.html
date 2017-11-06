@@ -40,15 +40,17 @@
 </div>
 <script>
 
-function xmlParser(xml) {
 
-    $(xml).find("Lan").each(function(){
-		console.log($(this).find("id").text());
-    });
-
-}
 
 $(document).ready(function(){
+
+	function xmlParser(xml) {
+		console.log(1);
+		$(xml).find("Lan").each(function(){
+			console.log($(this).find("id").text());
+		});
+
+	}
 
 	$.ajax({
         type: "GET",
@@ -65,6 +67,6 @@ $(document).ready(function(){
 	
 	});
 	
-	console.log('rdy ver 1.5');
+	console.log('rdy ver 1.6');
 });
 </script>
