@@ -53,7 +53,7 @@ $(document).ready(function(){
 					var idClass=this.tagName;//id,spark_desc
 					var val=$(this).text();//ru,Описание на спарк
 					console.log(".text_"+lanClass+"."+idClass+" - "+val);
-					$(".text_"+lanClass+"."+idClass).val(val);
+					$(".text_"+lanClass+"."+idClass).html(val);
 				});
 			});
 		});
