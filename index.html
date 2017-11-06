@@ -36,7 +36,7 @@
 		<span>https://github.com/akhasoft/Yakhont</span>
 	</div>	
 	
-	 
+	
 </div>
 <script>
 
@@ -47,9 +47,17 @@ $(document).ready(function(){
 	function xmlParser(xml) {
 		
 		$(xml).find("Lan").each(function(){
-			var id = $(this).find("id").text();
-			var tagName=$(this).tagName;
-			console.log(tagName);
+			//var id = $(this).find("id").text();
+			var tagName=this.tagName;
+			console.log(tagName+"<<1");
+			$(this).children().each(function(){
+				var tagName1=this.tagName;
+			console.log(tagName1+"<<2");
+				var tagName2=$(this).tagName;
+			console.log(tagName2+"<<3");
+				var val=$(this).text();
+			console.log(val+"<<4");
+			}
 		});
 
 	}
@@ -69,6 +77,6 @@ $(document).ready(function(){
 	
 	});
 	
-	console.log('rdy ver 1.8');
+	console.log('rdy ver 1.6');
 });
 </script>
