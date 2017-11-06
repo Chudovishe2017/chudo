@@ -46,7 +46,7 @@ $(document).ready(function(){
 
 	function xmlParser(xml) {
 		
-		$(xml).find(AvLans).each(function(){
+		$(xml).find("AvLans").each(function(){
 			var id=this.tagName;//ru|en
 			$(this).children().each(function(){
 				var tagName=this.tagName;//id,spark_desc
