@@ -18,8 +18,8 @@
 
 <div id="" class="wrapper">
 	<div>
-		<span class="text_ru textWrapper">Русский текст спарк.ру</span>
-		<span class="text_en textWrapper hidden">Английский текст спарк.ру</span>
+		<span class="spark_desc text_ru textWrapper"></span>
+		<span class="spark_desc text_en textWrapper hidden"></span>
 	</div>	
 	<div>
 		<span>https://spark.ru/startup/yahont/blog/33161/chto-takoe-yahont-i-chto-mi-hotim</span>
@@ -29,8 +29,8 @@
 
 <div id="" class="wrapper">
 	<div>
-		<span class="text_ru textWrapper">Русский текст гитхаб</span>
-		<span class="text_en textWrapper hidden">Английский текст гитхаб</span>
+		<span class="github_desc text_ru textWrapper"></span>
+		<span class="github_desc text_en textWrapper hidden"></span>
 	</div>	
 	<div>
 		<span>https://github.com/akhasoft/Yakhont</span>
@@ -46,17 +46,13 @@ $(document).ready(function(){
 
 	function xmlParser(xml) {
 		
-		$(xml).find("Lan").each(function(){
-			//var id = $(this).find("id").text();
-			var tagName=this.tagName;
-			console.log(tagName+"<<1");
+		$(xml).find(AvLans).each(function(){
+			var id=this.tagName;//ru|en
 			$(this).children().each(function(){
-					var tagName1=this.tagName;
-				console.log(tagName1+"<<2");
-					var tagName2=$(this).tagName;
-				console.log(tagName2+"<<3");
-					var val=$(this).text();
-				console.log(val+"<<4");
+				var tagName=this.tagName;//id,spark_desc
+				var val=$(this).text();//ru,Описание на спарк
+				console.log(id+":"+tagName+":"+val);
+				$(".text_"+id+"."+tagName).val(val);
 			});
 		});
 
@@ -77,6 +73,6 @@ $(document).ready(function(){
 	
 	});
 	
-	console.log('rdy ver 1.12');
+	console.log('rdy ver 1.14');
 });
 </script>
