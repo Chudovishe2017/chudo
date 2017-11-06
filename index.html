@@ -47,14 +47,13 @@ $(document).ready(function(){
 	function xmlParser(xml) {
 		
 		$(xml).find("AvLans").each(function(){
-			var id=this.tagName;//ru|en
 			$(this).children().each(function(){
-				var lanclass=this.tagName;//id,spark_desc
+				var lanClass=this.tagName;//id,spark_desc
 				$(this).children().each(function(){
-					var idclass=this.tagName;//id,spark_desc
+					var idClass=this.tagName;//id,spark_desc
 					var val=$(this).text();//ru,Описание на спарк
-					console.log(lanclass+":"+idclass+":"+val);
-					$(".text_"+lanclass+"."+idclass).val(val);
+					console.log(lanClass+":"+idClass+":"+val);
+					$(".text_"+lanClass+"."+idClass).val(val);
 				});
 			});
 		});
