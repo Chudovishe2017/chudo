@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <AvLans>
-  <Lan>
-    <id>ru</id>
+  <ru>
     <spark_desc>Описание ссылки на Spark</spark_desc>
     <github_desc>Описание ссылки на Github</github_desc>
-  </Lan>
-  <Lan>
-    <id>en</id>
+  </ru>
+  <en>
 	<spark_desc>Spark desc</spark_desc>
     <github_desc>Github desc</github_desc>
-  </Lan>
+  </en>
 </AvLans>
