@@ -5,14 +5,16 @@
 .hidden{display:none;}
 
 #topBlock {height:40px;}
-#langSelector {height:100%;position:absolute;right:0px;}
-#langSelector li{float:left;width:40px;height:100%;text-align:center;line-height:100%;}
+#langSelector {border:solid 1px #000;height:40px;position:absolute;right:0px;margin:5px 5px;}
+#langSelector li{cursor:pointer;color:#808080;float:left;width:40px;height:40px;text-align:center;line-height:40px;}
+#langSelector li.active{background:#32CD32;color:#fff;}
+#langSelector li:hover{background:#006400!important;color:#fff;}
 
 </style>
 <div id="topBlock" class="wrapper">
 	<ul id="langSelector">
+		<li data-lan="ru" class="active">RU</li>
 		<li data-lan="en">EN</li>
-		<li data-lan="ru">RU</li>
 	</ul>
 </div>
 
@@ -72,9 +74,11 @@ $(document).ready(function(){
 		var lan=$(this).data("lan");
 		$(".textWrapper").addClass("hidden");
 		$(".text_"+lan).removeClass("hidden");
+		$("#langSelector li").removeClass('active');
+		$(this).addClass('active');
 	
 	});
 	
-	console.log('rdy ver 1.20');
+	console.log('rdy ver 1.21');
 });
 </script>
