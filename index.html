@@ -50,9 +50,11 @@ $(document).ready(function(){
 			var id=this.tagName;//ru|en
 			$(this).children().each(function(){
 				var tagName=this.tagName;//id,spark_desc
-				var val=$(this).text();//ru,Описание на спарк
-				console.log(id+":"+tagName+":"+val);
-				$(".text_"+id+"."+tagName).val(val);
+				$(this).children().each(function(){
+					var val=$(this).text();//ru,Описание на спарк
+					console.log(id+":"+tagName+":"+val);
+					$(".text_"+id+"."+tagName).val(val);
+				}
 			});
 		});
 
