@@ -45,8 +45,9 @@
 $(document).ready(function(){
 
 	function xmlParser(xml) {
-		console.log(1);
+		
 		$(xml).find("Lan").each(function(){
+			console.log(1);
 			console.log($(this).find("id").text());
 		});
 
