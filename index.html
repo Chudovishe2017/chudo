@@ -366,14 +366,14 @@
 <script>
 $(document).ready(function(){
 
-	function scrollToTop(){
-		$('body').animate({scrollTop:0}, 500);
-	}
+function scrollToTop(){
+	$('body').animate({scrollTop:0}, 500);
+}
 
-    $('#scrollToTop').hide();
+$('#scrollToTop').hide();
 	
-	$(window).scroll(function () {
-        if ($(this).scrollTop() > 0) {
+$(window).scroll(function () {
+	if ($(this).scrollTop() > 0) {
             $('#scrollToTop').fadeIn();
         } else {
             $('#scrollToTop').fadeOut();
@@ -384,32 +384,32 @@ $(document).ready(function(){
             scrollTop: 0
         }, 400);
         return false;
-    });
+});
 	
-	$("#langSelector li").click(function(){
+$("#langSelector li").click(function(){
 	
-		var lan=$(this).data("lan");
-		$(".textWrapper").addClass("hidden");
-		$(".text_"+lan).removeClass("hidden");
-		$("#langSelector li").removeClass('active');
-		$(this).addClass('active');
+	var lan=$(this).data("lan");
+	$(".textWrapper").addClass("hidden");
+	$(".text_"+lan).removeClass("hidden");
+	$("#langSelector li").removeClass('active');
+	$(this).addClass('active');
 	
-	});
+});
 
 	
-	$("#mainMenu .menuItem").click(function(){
+$("#mainMenu .menuItem").click(function(){
 	
-		var content=$(this).data("content");
-		console.log(content);
-		$(".content").addClass("hidden");
-		$("#"+content).removeClass("hidden");
-		$(".menuItem").removeClass("selected");
-		$(this).addClass("selected");
+	var content=$(this).data("content");
+	$(".content").addClass("hidden");
+	$("#"+content).removeClass("hidden");
+	$(".menuItem").removeClass("selected");
+	$(this).addClass("selected");
 
-	});	
+});	
 	
 	
-	console.log('rdy ver 1.0');
+console.log('rdy ver 1.1');
+	
 });
 </script>
 
