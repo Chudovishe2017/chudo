@@ -32,6 +32,8 @@
 	#mainMenu .menuItem.last {float:left;padding:0px 10px;border:0px;padding:0 10px;}
 	#mainMenu .selected .textWrapper {text-decoration:underline;}
 
+	#scrollToTop{width:14px;height:21px;background:url('scrollToTop.png') #fff no-repeat center center;position:fixed;bottom:20px;right:20px;z-index:10;cursor:pointer;padding:10px 10px; border:solid 1px #000;}
+
 	@media all and (max-width:600px){
 		#mainMenu {width:100%;}
 		#mainMenu .menuItem {float:none;}
@@ -43,7 +45,7 @@
 </style>
 </head>
 <body>
-
+<div id="scrollToTop"></div>
 <div id="topBlock" class="wrapper">
 	<ul id="langSelector">
 		<li data-lan="ru" class="active">RU</li>
@@ -363,6 +365,26 @@
 
 <script>
 $(document).ready(function(){
+
+	function scrollToTop(){
+		$('body').animate({scrollTop:0}, 500);
+	}
+
+    $('#scrollToTop').hide();
+	
+	$(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            $('#scrollToTop').fadeIn();
+        } else {
+            $('#scrollToTop').fadeOut();
+        }
+    });
+    $('#scrollToTop').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
 	
 	$("#langSelector li").click(function(){
 	
